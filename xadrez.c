@@ -62,6 +62,31 @@ int main() {
         printf("Esquerda\n");
         contadorRainha++;
     } while (contadorRainha <= casasRainha);
+    
+    printf("\n"); // Adiciona uma linha em branco para separar o novo movimento
+
+    // Movimento do Cavalo (com loops aninhados)
+    printf("--- Movimento do Cavalo: 2 casas para baixo e 1 para a esquerda ---\n");
+    
+    int casasBaixo = 2;
+    int casasEsquerda = 1;
+    int movimentoL = 1; // Variavel de controle para o loop externo
+
+    // O loop externo (while) executa apenas uma vez
+    while (movimentoL <= 1) {
+        // O loop interno (for) simula a "perna" vertical do L
+        for (int i = 1; i <= casasBaixo; i++) {
+            printf("Baixo\n");
+        }
+        
+        // O loop interno (for) simula a "perna" horizontal do L
+        for (int i = 1; i <= casasEsquerda; i++) {
+            printf("Esquerda\n");
+        }
+
+        movimentoL++; // Garante que o loop externo rode apenas uma vez
+    }
+
 
     return 0;
 }
